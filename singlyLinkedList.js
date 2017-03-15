@@ -1,13 +1,20 @@
+/*
+ * Constructor for Singly linked list
+ */
 function SinglyList(){
 	this.head = null;
 	this.length = 0;
 }
-
+/*
+ * Constructor for node
+ */
 function Node(value){
 	this.value = value;
 	this.next = null;
 }
-
+/*
+ * Method to insert an element
+ */
 SinglyList.prototype.add = function(val){
 	var node = new Node(val);
 	if(this.length === 0){
@@ -24,7 +31,9 @@ SinglyList.prototype.add = function(val){
 	this.length++;
 	console.log("Node added");
 };
-
+/*
+ * Method to display the list
+ */
 SinglyList.prototype.display = function(){
 	var currentNode = this.head;
 	if(this.length == 0){
@@ -37,7 +46,9 @@ SinglyList.prototype.display = function(){
 	}
 	console.log("end");
 };
-
+/*
+ * Method to find element by position
+ */
 SinglyList.prototype.find = function(position){
 	var currentNode = this.head;
 	var i=1;
@@ -56,7 +67,9 @@ SinglyList.prototype.find = function(position){
 	console.log(currentNode.value);
 	return currentNode;
 };
-
+/*
+ * Method to delete an element by position 
+ */
 SinglyList.prototype.delete = function(position){
 	var currentNode,i=1;
 	currentNode = this.find(position);
